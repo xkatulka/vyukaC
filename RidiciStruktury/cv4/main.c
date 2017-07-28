@@ -58,6 +58,8 @@ int main() {
                 if (i == 0) a = 15; else b = 15;
                 break;
             default:
+                a = 0;
+                b = 0;
                 break;
         }
     }
