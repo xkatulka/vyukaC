@@ -5,10 +5,10 @@ int main() {
     Pozor - nečtěte  jedno hexadecimální číslo! Tyto dva znaky pak považujte
      za hexadecimální číslo a jeho hodnotu vypište dekadicky.
      */
-    short int i, a, b;
-
-    for (i = 0; i < 2; i++){
-        switch(getchar()){
+    short int i;
+    int c, hodnota = 0, a = 0, b = 0;
+   /* for (i = 0; i < 2; i++){
+        /*switch(getchar()){
             case '0':
                 if (i == 0) a = 0; else b = 0;
                 break;
@@ -62,7 +62,18 @@ int main() {
                 b = 0;
                 break;
         }
+    }*/
+    for (i = 0; i < 2; i++) {
+        if ((c = getchar()) >= '0' && c <= '9')
+            hodnota = c - '0';
+        else {
+            if (c >= 'A' && c <= 'F')
+                hodnota = 75 - 2 * 'A' + c;
+        }
+        if (i == 0) a = hodnota;
+        else b = hodnota;
     }
-    printf("Hexadecimalni cislo %X%X = %d\n",a,b,a*16+b);
+
+    printf("Hexadecimalni cislo %X = %d\n",a*16+b,a*16+b);
     return 0;
 }
