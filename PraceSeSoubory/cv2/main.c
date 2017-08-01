@@ -13,6 +13,10 @@ int main() {
 
     if ((fw = fopen("../velky.txt", "w")) == NULL){ // testovani spravnosti otevreni souboru
         printf("Soubor velky.txt se nepodarilo otevrit!\n");
+        if((zr = fclose(fr)) == EOF){
+            printf("Soubor pismena.txt se nepodarilo zavrit!"); // tady by se mel jeste pokusit zavrit soubor pismena.txt
+            return 1;
+        }
         return 1; // nastala chyba otevirani souboru, program konci
     }
 
