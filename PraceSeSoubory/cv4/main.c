@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // cv 3 Vytvorte program, ktery precte soubor pismena.txt po radcich. Kazdou radku presne opise do souboru kolik.txta na nove radce uvede, kolik znaku na ni bylo.
+    // cv 4 Vytvorte program, ktery precte soubor pismena.txt po radcich. Kazdou radku presne opise do souboru kolik.txta na nove radce uvede, kolik znaku na ni bylo.
 
     FILE *fr, *fw; // soubor pro cteni, soubor pro zapis
     int i, c, zw, zr, pocet = 0, pocet2 = 0, cislice, desitky; // znak
@@ -28,7 +28,8 @@ int main() {
             pocet ++;
             putc(c, fw);
         }
-        putc('\n', fw);
+        fprintf(fw, "\n%d\n", pocet);
+ /*       putc('\n', fw);
         // to cislo musim prevest na jednotlive cislice a pak teprve zapsat pomoci putc a ve spravnem poradi
         // napred zjistim o jak velke cislo se jedna
         desitky = 0;
@@ -49,6 +50,7 @@ int main() {
             putc(cislice + '0', fw);
         }
         putc('\n', fw);
+        */
     }
 
     if((zw = fclose(fw)) == EOF){
