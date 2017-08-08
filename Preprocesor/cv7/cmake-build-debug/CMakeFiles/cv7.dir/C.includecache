@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/_EDUCANET/1_A_PRG/Preprocesor/cv7/hlavni.c
+stdio.h
+-
+makro.c
+D:/_EDUCANET/1_A_PRG/Preprocesor/cv7/makro.c
+
+D:/_EDUCANET/1_A_PRG/Preprocesor/cv7/makro.c
+
